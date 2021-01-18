@@ -1,10 +1,10 @@
 pipeline{
     agent any
     parameters{
-        choice(name: 'choice', version: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+        choice(name: 'choice', choices: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
     }
     stages{
-         stage('init') {
+         stage('init'){
             steps {
                 script {
                     gv = load 'multiply.groovy'
